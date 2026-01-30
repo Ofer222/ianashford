@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>가드너 - 이불위키</title>
+  <title>이안 애쉬포드 - 이불위키</title>
   <style>
     * { box-sizing: border-box; }
 
@@ -97,7 +97,7 @@
     /* 목차 박스 */
     .toc-box {
       float: left;
-      width: 180px;
+      width: 260px;
       background: #181818;
       border: 1px solid #444;
       padding: 8px 10px;
@@ -360,6 +360,80 @@
     max-width: 100%;
   }
 }
+.alias-list{
+  list-style: none !important;
+  margin: 6px 0 0 0 !important;
+  padding: 0 !important;
+}
+.alias-list li{
+  line-height: 1.6 !important;
+}
+
+.alias-summary{
+  cursor: pointer !important;
+  user-select: none;
+  display: inline-block;
+  white-space: nowrap;
+  color: #ffb54a; 
+}
+.alias-details summary::-webkit-details-marker{ display:none; }
+.alias-details summary{ list-style:none; }
+
+.alias-row > th{
+  vertical-align: middle !important;
+}
+.alias-row > td{
+  vertical-align: middle !important;
+}
+
+.alias-details:not([open]) .alias-list{
+  display: none !important;
+}
+.alias-details[open] .alias-list{
+  display: block !important;
+}
+
+.alias-main{
+  font-weight: 700;
+}
+
+.alias-danger{
+  color: #FF0000;
+  font-weight: 600;
+}
+.toc, .toc ol{
+  margin: 0;
+  padding-left: 18px;   /* 들여쓰기 */
+}
+.toc li{
+  margin: 4px 0;
+  line-height: 1.6;
+}
+.toc a{
+  text-decoration: none;
+}
+.toc a:hover{
+  text-decoration: underline;
+}
+.footnotes {
+  font-size: 13px;
+  color: #cccccc;
+  margin-top: 12px;
+  padding-left: 18px;
+}
+.footnotes li {
+  margin-bottom: 6px;
+}
+.footnotes a {
+  color: #ffcc66;
+  text-decoration: none;
+}
+.footnotes a:hover {
+  text-decoration: underline;
+}
+sup {
+  font-size: 11px;
+}
   </style>
 
 </head>
@@ -378,7 +452,7 @@
 </header>
 
 <div id="page">
-  <div class="doc-title">가드너</div>
+  <div class="doc-title">이안 애쉬포드</div>
   <div class="doc-meta">최근 수정 시각: 2025-03-01 00:00:00</div>
 
   <div class="top-layout clearfix">
@@ -397,8 +471,32 @@
           </ol>
         </li>
         <li><a href="#기타특징">3. 기타 특징</a></li>
-        <li><a href="#커플링">4. 커플링</a></li>
-        <li><a href="#여담">5. 여담</a></li>
+        <li><a href="#작중행적">4. 작중행적</a></li>
+          <ol>
+            <li><a href="#OverMind">4.1. OverMind</a></li>
+            <li><a href="#OverMind2">4.2. OverMind2</a></li>
+            <li><a href="#OverMind3">4.3. OverMind3</a></li>
+          </ol>
+        </li>
+  <li><a href="#여담">5. 여담</a></li>
+
+  <li><a href="#미디어믹스">6. 미디어믹스</a>
+    <ol>
+      <li><a href="#소설">6.1. 소설</a>
+        <ol>
+          <li><a href="#우는법을잊은고양이">6.1.1. 우는 법을 잊은 고양이</a></li>
+        </ol>
+      </li>
+
+      <li><a href="#게임">6.2. 게임</a>
+        <ol>
+          <li><a href="#파이터월드">6.2.1. 파이터 월드</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
       </ol>
     </nav>
 
@@ -406,34 +504,54 @@
     <table class="char-infobox">
       <tr>
         <td class="char-name-row" colspan="2">
-          <div class="name-eng">Gardener</div>
-          <div class="name-kor">가드너</div>
+          <div class="name-eng">Ian Ashford</div>
+          <div class="name-kor">이안 애쉬포드</div>
         </td>
       </tr>
 
       <tr>
         <td class="char-image-cell" colspan="2">
-          <img src="일러스트8.png" alt="가드너" />
+          <img src="이안애쉬포드.png" alt="이안 애쉬포드" />
         </td>
       </tr>
 
       <tr>
-        <th>소속 게임</th>
+        <th>등장 작품</th>
         <td>
-          <a href="https://sawa1023.github.io/FALL-OF-TITAN/"
+          <a href="OverMind 시리즈"
              class="orange-link" target="_blank">
-             FALL OF TITAN
+             OverMind 시리즈
           </a>
         </td>
       </tr>
 
-      <tr><th>거주 지역</th><td>잊혀진 신전, 멸지</td></tr>
-      <tr><th>성별</th><td>여성</td></tr>
-      <tr><th>나이</th><td>22세</td></tr>
-      <tr><th>신체</th><td>160cm / 45kg</td></tr>
-      <tr><th>취미</th><td>풀에 물주기</td></tr>
-      <tr><th>좋아하는 것</th><td>명상, 개미 관찰, 숫자 세기</td></tr>
+      <tr><th>성별</th><td>남성</td></tr>
+      <tr><th>나이</th><td>27세</td></tr>
+      <tr><th>신체</th><td>180cm / 78kg</td></tr>
+      <tr><th>소속</th><td>이안 애쉬포드 연구소</td></tr>
+      <tr><th>직업</th><td>과학자, 공학자</td></tr>
       <tr><th>종족</th><td>인간</td></tr>
+  <tr class="alias-row">
+  <th class="alias-th">이명</th>
+  <td class="alias-td">
+    <details class="alias-details">
+      <summary class="alias-summary">
+        이명 보기 / 접기
+      </summary>
+
+      <ul class="alias-list">
+        <li><span class="alias-main">천재 과학자 (The genius scientist)</span></li>
+        <li>위대한 과학자 (The great scientist)</li>
+        <li><span class="alias-main">애쉬포드 박사 (Dr. Ashford)</span></li>
+        <li>파괴자 (Destroyer)</li>
+        <li>잿더미 속 창조자 (The Creator in the Ashes)</li>
+        <li><span class="alias-danger">끔찍한 인간 (The terrible human)</span></li>
+      </ul>
+    </details>
+  </td>
+</tr>
+
+</td></tr>
 
     </table>
   </div>
@@ -444,11 +562,11 @@
 
   <div class="quote-block">
     <div class="quote-main">
-      잊힌 신전의 가드너.
+      창조자, 혹은 파괴자.
     </div>
     <div class="quote-sep"></div>
     <div class="quote-sub">
-      가드너의 캐치프레이즈
+      이안 애쉬포드의 캐치프레이즈
     </div>
   </div>
 
@@ -456,29 +574,25 @@
 
   <div class="quote-block">
     <div class="quote-main">
-      “거인은 모두 묻힐거다.”
+      “널 만들어낸건 내 가장 큰 실수였어. 그러니까, 지금 폐기할거야.”
     </div>
     <div class="quote-sep"></div>
     <div class="quote-sub">
-      무너진 신전의 석상을 본 가드너
+      OverMind와의 최종전투에서 OverMind를 만난 이안 애쉬포드의 대사.
     </div>
   </div>
 
   <p>
-    <a href="https://sawa1023.github.io/FALL-OF-TITAN/"
-       class="orange-link" target="_blank">
-       FALL OF TITAN
-    </a>
-    의 주인공. 거인의 봉인을 지키기 위해
-    시간이 멈춘 멸지에서 홀로 신전을 관리하는 소녀다.
-    거인들이 악에 물들자 거인을 신전과 함께 완전히 봉인하기 위해
-    단검 한자루(...)를 들고 멸지 곳곳을 여행한다.
+     OverMind 시리즈의 주인공이자 플레이어블 캐릭터.
+    세계관 최고의 천재 과학자이자, 작중 메인 빌런인 OverMind의 창조자이다.
+    제어장치가 망가진 OverMind의 폭주로 인해, 직접 스스로 OverMind를 파괴하려 한다.
   </p>
 
   <h2 id="특징">2. 특징</h2>
 
   <h3 id="외모">2.1. 외모</h3>
-  <p>털이 달린 후드를 눌러쓰고 있어 맨 얼굴은 알 수 없으며 평소에는 항상 주머니에 손을 넣고있으나 무기를 들거나 급박한 상황에선 손을 빼기도 한다. 겨울에나 어울리는 상의와 달리 하의는 짧은 반바지로 허벅지가 드러날 정도이다. 양 허벅지에 밴드가 붙어있다. 시간이 흐르지 않는 멸지라는 지역의 특성 탓에 긁힌 상처도 자연치유 되지 않아 항상 밴드를 붙이고 다니는 듯 하다. 같은 이유로 일백년이 넘는 세월을 신전에서 살아왔음에도 20대의 외모 그대로 늙지 않았다.</p>
+  <p>눈처럼 새하얀 머리카락과 그와 반대되는 붉은색의 눈이 특징이다. 왼쪽 눈에는 길다란 상처와 함께 하얀색의 의안이 장착되어있다. 
+</p>
 
   <h3 id="소지품">2.2. 소지품</h3>
 
@@ -530,6 +644,16 @@
     <li>출시 전 공개된 상징 이모지는 '🗿'.</li>
   </ul>
 
+<hr>
+
+<h2 id="각주">각주</h2>
+<ol class="footnotes">
+  <li id="note-1">
+    
+    <a href="#ref-1">↩</a>
+  </li>
+</ol>
+
   <p class="small">
     이 문서는 팬메이드 자캐 문서이며, 실제로 존재하는 게임 및 웹사이트가 아닙니다.
   </p>
@@ -537,3 +661,9 @@
 </div>
 </body>
 </html>
+
+
+
+
+
+
