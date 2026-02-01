@@ -489,6 +489,186 @@ h4{
   border-bottom: 1px solid #444;  /* ← dashed → solid */
   padding-bottom: 2px;
 }
+/* 스포일러 경고 박스 */
+.spoiler-box{
+  border: 1px solid #888;
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 12px;
+  margin: 14px 0;
+  font-size: 14px;
+}
+
+/* 상단 주황색 라인 */
+.spoiler-box{
+  border-top: 4px solid #ff9900;
+}
+
+/* 강조 텍스트 */
+.spoiler-highlight{
+  color: #0066ff;
+  font-weight: 700;
+}
+
+/* 설명 문장 */
+.spoiler-desc{
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+/* ===== 시리즈 둘러보기 박스 ===== */
+.series-box{
+  border: 1px solid #444;
+  background: #141414;
+  margin: 14px 0;
+}
+
+.series-header{
+  background: #1b1464; /* 상단 보라색 느낌 */
+  padding: 10px 12px;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.series-title{
+  color: #ff55aa;       /* 타이틀 강조 */
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.series-sub{
+  color: #e0e0e0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.series-details{
+  border-top: 1px solid #444;
+}
+
+/* summary 기본 마커 제거 + 클릭 가능 */
+.series-summary{
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 12px;
+  background: #cfd2ff;  /* 연보라 바 */
+  color: #111;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.series-summary::-webkit-details-marker{ display:none; }
+
+/* ▼ 회전 */
+.series-details[open] .series-caret{
+  transform: rotate(180deg);
+}
+.series-caret{
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+/* 3칸 그리드 */
+.series-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+}
+
+/* 카드(각 칸) */
+.series-card{
+  display: block;
+  text-decoration: none;
+  border-right: 1px solid #ddd;
+}
+.series-card:last-child{
+  border-right: none;
+}
+
+/* 이미지: 1600x300 들어와도 칸에 맞춰 잘라서 보기 좋게 */
+.series-card img{
+  width: 100%;
+  height: 140px;         /* 화면에서 보이는 높이(원하면 120~180으로 조절) */
+  object-fit: cover;     /* 비율 유지 + 가운데 기준으로 잘라냄 */
+  display: block;
+}
+
+/* 아래 글자 */
+.series-name{
+  padding: 10px 8px;
+  text-align: center;
+  color: #1a4cff;        /* 파란 링크 느낌 */
+  font-weight: 800;
+  background: #ffffff;
+}
+
+/* 모바일: 1칸씩 쌓기 */
+@media (max-width: 720px){
+  .series-grid{ grid-template-columns: 1fr; }
+  .series-card{ border-right: none; border-bottom: 1px solid #ddd; }
+  .series-card:last-child{ border-bottom: none; }
+}
+/* ===== 시리즈 둘러보기 색상 커스터마이즈 ===== */
+
+/* 전체 틀 */
+.series-box{
+  border: 1px solid #aaa;
+  background: #e5e5e5;   /* 전체 회색 */
+}
+
+/* 상단 헤더 */
+.series-header{
+  background: #d9d9d9;   /* 연회색 */
+  padding: 10px 12px;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+/* OverMind 시리즈 (빨간색) */
+.series-title{
+  color: #e60012;        /* 빨간색 */
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* 게임 일람 (검은색) */
+.series-sub{
+  color: #000000;        /* 검은색 */
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* 시리즈 목록 ▼ 영역 (하얀색) */
+.series-summar
+/* 시리즈 목록 ▼ 칸 강제 흰색 */
+.series-details > summary.series-summary{
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+.series-header{
+  background: #d9d9d9;
+  padding: 10px 12px;
+
+  display: flex;
+  justify-content: center;   /* ← 가로 가운데 */
+  align-items: center;       /* ← 세로 가운데 */
+  gap: 8px;
+  text-align: center;
+}
+/* 시리즈 목록 ▼ 영역 (연한 회색으로 확정) */
+.series-details > summary,
+.series-summary{
+  background-color: #f0f0f0 !important; /* 연한 회색 */
+  color: #000000 !important;
+  border-top: 1px solid #bdbdbd;
+  border-bottom: 1px solid #bdbdbd;
+}
   </style>
 
 </head>
@@ -706,7 +886,15 @@ h4{
   </ul>
 
 <h2 id="작중행적">4. 작중행적</h2>
-<p>여기에 4번 전체 설명/요약을 적으면 돼.</p>
+<p><div class="spoiler-box">
+  <p>
+    이 문서에 <span class="spoiler-highlight">스포일러</span>가 포함되어 있습니다.
+  </p>
+  <p class="spoiler-desc">
+    이 문서가 설명하는 작품이나 인물 등에 대한
+    줄거리, 결말, 반전 요소 등을 직·간접적으로 포함하고 있습니다.
+  </p>
+</div>
 
 <h3 id="OverMind">4.1. OverMind</h3>
 <p>여기에 OverMind에서의 행적 내용을 적어.</p>
@@ -715,8 +903,9 @@ h4{
 <p>여기에 OverMind2에서의 행적 내용을 적어.</p>
 
 <h3 id="OverMind3">4.3. OverMind3</h3>
-<p>여기에 OverMind3에서의 행적 내용을 적어.</p>
+<p>OverMind3가 제작이 확정됨에 따라 자연스럽게 이안 애쉬포드 또한 등장이 확정되었다. 제작자의 말로는 OverMind시리즈는 3에서 마무리 될 예정이라고 밝혔다.</p>
 
+<p>OverMind3는 이안 애쉬포드의 서사가 마무리되는 작품이 될 것이라고 밝혔고, 추가로 정신적인 성장과 더불어 이안이 더 이상 과거에 얽매이지 않고 앞으로 나아갈 수 있는 이야기를 다룰 것이라고 언급했다.<p>
 
 <!-- 5. 여담 -->
 <h2 id="여담">5. 여담</h2>
@@ -755,6 +944,36 @@ h4{
 <p>
 게임에서의 등장 방식, 캐릭터 성능, 스토리 연계 등을 설명한다.
 </p>
+
+<!-- 7. 둘러보기 -->
+<h2 id="둘러보기">7. 둘러보기</h2>
+<p><section class="series-box">
+  <div class="series-header">
+    <div class="series-title">OverMind 시리즈</div>
+    <div class="series-sub">게임 일람</div>
+  </div>
+
+  <details class="series-details" open>
+    <summary class="series-summary">시리즈 목록 <span class="series-caret">▼</span></summary>
+
+    <div class="series-grid">
+      <a class="series-card" href="#OverMind">
+        <img src="OverMind1로고.jpg" alt="OverMind">
+        <div class="series-name">OverMind</div>
+      </a>
+
+      <a class="series-card" href="#OverMind2">
+        <img src="OverMind2로고.jpg" alt="OverMind2">
+        <div class="series-name">OverMind2</div>
+      </a>
+
+      <a class="series-card" href="#OverMind3">
+        <img src="OverMind3로고.jpg" alt="OverMind3">
+        <div class="series-name">OverMind3</div>
+      </a>
+    </div>
+  </details>
+</section></p>
   </ul>
 
 <hr>
